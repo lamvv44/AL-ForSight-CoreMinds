@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI ForeSight | AI Financial Investigator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell page-enter">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand-lockup">
+        <div class="brand-mark">
+          <span class="material-symbols-rounded">hub</span>
+        </div>
+        <div>
+          <p class="brand-name">AI ForeSight</p>
+          <p class="brand-subtitle">AI Financial Investigator</p>
+        </div>
+      </div>
+
+      <nav class="nav-list">
+        <a class="nav-item active" href="index.html" aria-current="page">
+          <span class="material-symbols-rounded">dashboard</span>
+          Dashboard
+        </a>
+        <a class="nav-item" href="companies.html">
+          <span class="material-symbols-rounded">domain</span>
+          Companies
+        </a>
+      </nav>
+
+      <div class="sidebar-panel">
+        <span class="material-symbols-rounded">verified_user</span>
+        <p>AI analyzes multiple data sources including imports, tax declarations, sector benchmarks, and historical sales to identify financial risk indicators.</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>AI ForeSight</h1>
+          <p class="topbar-subtitle">AI Financial Investigator</p>
+        </div>
+      </header>
+
+      <section class="metrics-grid" aria-label="Risk overview metrics">
+        <article class="metric-card metric-total" style="--delay: 0ms">
+          <div class="metric-icon">
+            <span class="material-symbols-rounded">analytics</span>
+          </div>
+          <p>Companies Analyzed</p>
+          <strong data-count="100">0</strong>
+        </article>
+        <article class="metric-card metric-danger" style="--delay: 90ms">
+          <div class="metric-icon">
+            <span class="material-symbols-rounded">priority_high</span>
+          </div>
+          <p>High Risk</p>
+          <strong data-count="15">0</strong>
+        </article>
+        <article class="metric-card metric-warning" style="--delay: 180ms">
+          <div class="metric-icon">
+            <span class="material-symbols-rounded">error</span>
+          </div>
+          <p>Medium Risk</p>
+          <strong data-count="30">0</strong>
+        </article>
+        <article class="metric-card metric-success" style="--delay: 270ms">
+          <div class="metric-icon">
+            <span class="material-symbols-rounded">check_circle</span>
+          </div>
+          <p>Low Risk</p>
+          <strong data-count="55">0</strong>
+        </article>
+      </section>
+
+      <section class="charts-grid">
+        <article class="surface chart-surface">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Risk Distribution</p>
+              <h2>Portfolio risk split</h2>
+            </div>
+            <span class="status-pill" id="portfolioEntityCount">100 companies</span>
+          </div>
+          <div class="donut-wrap">
+            <canvas id="riskDistributionChart" aria-label="Risk Distribution pie chart"></canvas>
+            <div class="donut-center">
+              <span>15%</span>
+              <small>High risk</small>
+            </div>
+          </div>
+          <div class="legend-row">
+            <span><i class="legend-dot danger-bg"></i><span id="highRiskLegend">High 15%</span></span>
+            <span><i class="legend-dot warning-bg"></i><span id="mediumRiskLegend">Medium 30%</span></span>
+            <span><i class="legend-dot success-bg"></i><span id="lowRiskLegend">Low 55%</span></span>
+          </div>
+        </article>
+
+        <article class="surface chart-surface wide">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Monthly Risk Trend</p>
+              <h2>Monthly Risk Trend</h2>
+            </div>
+            <span class="status-pill purple">AI monitored</span>
+          </div>
+          <div class="line-chart-wrap">
+            <canvas id="monthlyRiskTrendChart" aria-label="Monthly Risk Trend line chart"></canvas>
+          </div>
+        </article>
+      </section>
+
+      <section class="surface table-surface">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Top High Risk Companies</p>
+            <h2>Top High Risk Companies</h2>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Sector</th>
+                <th>Risk Score</th>
+                <th>Key Signal</th>
+                <th>View Investigation</th>
+              </tr>
+            </thead>
+            <tbody id="highRiskTable"></tbody>
+          </table>
+        </div>
+        <p class="risk-method-note">Risk score is calculated using import values, declared sales, historical trends, and sector benchmarks.</p>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="functionalDemoToast" role="status" aria-live="polite">
+    AI ForeSight Functional Demo uses synthetic realistic data for auditor workflow testing.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
