@@ -115,10 +115,10 @@
         <article class="surface summary-risk-card anomaly-glow">
           <p class="eyebrow">Risk Score</p>
           <div class="summary-risk-value">96<span>/100</span></div>
-          <p>Critical risk level driven by import-sales variance, revenue decline, and sector deviation.</p>
+          <p id="riskExplanation">Critical risk level driven by import-sales variance, revenue decline, and sector deviation.</p>
         </article>
 
-        <article class="surface comparison-card">
+        <article class="surface comparison-card" id="sectorComparisonCard">
           <div class="section-heading">
             <div>
               <p class="eyebrow">Sector Comparison</p>
@@ -127,26 +127,26 @@
           </div>
           <div class="comparison-bars">
             <div class="comparison-row">
-              <span>Company import-to-sales ratio</span>
-              <strong>171%</strong>
-              <div class="bar-track"><i class="bar-fill danger-fill" style="width: 96%"></i></div>
+              <span id="companyComparisonLabel">Company import-to-sales ratio</span>
+              <strong id="companyImportSalesRatio">171%</strong>
+              <div class="bar-track"><i class="bar-fill danger-fill" id="companyImportSalesBar" style="width: 96%"></i></div>
             </div>
             <div class="comparison-row">
-              <span>Sector benchmark</span>
-              <strong>64%</strong>
-              <div class="bar-track"><i class="bar-fill purple-fill" style="width: 52%"></i></div>
+              <span id="sectorComparisonLabel">Sector benchmark</span>
+              <strong id="sectorBenchmarkRatio">64%</strong>
+              <div class="bar-track"><i class="bar-fill purple-fill" id="sectorBenchmarkBar" style="width: 52%"></i></div>
             </div>
           </div>
         </article>
 
-        <article class="surface monthly-card">
+        <article class="surface monthly-card" id="monthlyTrendCard">
           <div class="section-heading">
             <div>
               <p class="eyebrow">Monthly Trend</p>
               <h2>Sales consistency review</h2>
             </div>
           </div>
-          <div class="mini-trend">
+          <div class="mini-trend" id="monthlyTrendBars">
             <span style="height: 74%"></span>
             <span style="height: 66%"></span>
             <span style="height: 62%"></span>
@@ -154,7 +154,7 @@
             <span style="height: 43%"></span>
             <span class="anomaly-bar" style="height: 31%"></span>
           </div>
-          <p class="mini-caption">Two months show abnormal drops compared with historical patterns.</p>
+          <p class="mini-caption" id="monthlyTrendCaption">Two months show abnormal drops compared with historical patterns.</p>
         </article>
 
         <article class="surface indicators-summary-card">
